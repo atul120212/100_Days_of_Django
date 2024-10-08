@@ -7,17 +7,17 @@
         {% for slide in sliders %}
 
         <div class="top-banner">
-            <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+            <img src="{{ slide.photo.url }}" alt="" class="img-fluid w-100">
             <div class="top-container d-flex flex-column pl-5">
                 <h1>
                     {{ slide.headline}}
                 </h1>
                 <p>
-                    Hire a YTubers and let them do the maketing for you
+                    {{ slide.subtitle}}
                 </p>
                 <div>
                     <button class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
-                        Read More
+                        {{ slide.button_text}}
                     </button>
                 </div>
             </div>
